@@ -4,20 +4,18 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
+* This is a MERN CRUD simple app to add implant failure. with JWT auth (access & refrshToken in cookie)
+  The app has Admin and User roles (admin, coordinator and user) which each of them has different access to add or edit of items
+  The backend security managed well.
 * Version 1.0.0
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
 
 * Install Docker
-* run docker with docker-compose up -d
+* create folder named mernproject or whatever you like
+* run project with docker-compose build -d and docker-compose up -d
+* to access mongoDb remotely uncomment ports of mongo_db in docker-compose.yml
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
 
 ### Who do I talk to? ###
 
