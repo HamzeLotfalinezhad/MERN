@@ -1,0 +1,71 @@
+version: '3.2'
+services:
+
+  # Nginx Service
+  nginx:
+    container_name: nginx_container
+    image: nginx:latest
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - mongo_db
+  
+  mongo_db:
+    container_name: db_container
+    image: mongo:latest
+    restart: always
+    expose: # For internal docker network access
+      - 27017
+    ports:  # For external access
+      - 27017:27017  
+    # This will create mern_mongo-data volume in /var/lib/docker/volumes/ 
+    # and will map /data/db of db_container to mern_mongo-data of docker volume
+    # so mongo data will not lost if container is down
+    # if there is no "_data" folder in mern_mongo-data, create it manually or with command "docker volume create mern_mongo-data"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: mypass 
+    
+  backend:
+    container_name: backend_container
+    build: ./server # build Dockerfile in /server path
+    ports: # For external access
+      - 5000:5000 # local-port:docker-port
+    environment: 
+      MONGO_URL: mongodb://root:mypass@mongo_db:27017/implantfailuredb   # set serviec name or container name in ....:27017 not localhost
+      PORT: 5000
+    depends_on:
+      - mongo_db
+
+  frontend:
+    container_name: frontend_container
+    build: ./client
+    expose: # For internal docker netweork access
+      - 3000
+    ports: # For external access
+      - 3000:3000
+    stdin_open: true
+    environment:
+      REACT_APP_BASE_URL: http://65.109.203.126:5000/ # when defining .env here, you dont need to change client/.env 
+    depends_on:
+      - backend
+
+  # Service for restoring mongo backup
+  # Run just once. you already created mongo-data volume for mongodb data current data
+  # if you run this for the next times, it will delete current mongodb data
+  # initial_mongo_data:
+  #   image: mongo:latest
+  #   container_name: initial_mongo_data
+  #   command: mongorestore --drop --host mongo_db --gzip --archive=/data/backup/backup.gz
+  #   volumes:
+  #     - /root/backup:/data/backup
+  #   depends_on:
+  #     - mongo_db
+
+volumes:
+  mongo-data: {}

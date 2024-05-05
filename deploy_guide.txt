@@ -1,0 +1,13 @@
+change .env file based on your server info
+
+
+change package.json 1 to 2 in server/package.json
+1 >> "start": "nodemon app.js" 
+2 >> "start": "node app.js"
+
+
+change database name in docker-compose.yml in 
+server: 
+  MONGO_URL:mongodb://mongo_db:27017/mymerndb
+
+do this only if you uploaded the local db to server

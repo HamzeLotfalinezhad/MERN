@@ -1,0 +1,27 @@
+
+### login
+POST http://65.109.203.126:5000/admin/login
+Content-Type: application/json
+
+{
+  "phone":"09128190379",
+  "password":"12345"
+}
+
+
+### user
+POST http://65.109.203.126:5000/admin/backupDatabase
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjI0MWRkMzkxMGNjYWY2ZGI1MGQ1MjkiLCJuYW1lIjoi2KfYrdmF2K_Ysdi22Kcg2YTYt9mB2LnZhNuMIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE0MTUzMjM1LCJleHAiOjE3MTQxNTQxMzV9.t7t_LRnUIgOr4nKvlIlIjS0VFoejFwWHlq30r7Qo65Q
+
+
+### refresh token
+POST http://localhost:5000/user/refreshAccessToken
+Content-Type: application/json
+
+
+### logout
+GET http://localhost:5000/user/logout
+Content-Type: application/json
+
+
+

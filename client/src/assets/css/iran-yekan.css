@@ -1,0 +1,62 @@
+﻿@font-face {
+	font-family: IRANSans;
+	font-style: bold;
+	font-weight: 900;
+	src: url('../fonts/IranYekan/eot/iranyekanwebbold.eot');
+	src: url('../fonts/IranYekan/eot/iranyekanwebbold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/IranYekan/woff2/iranyekanwebbold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/IranYekan/woff/iranyekanwebbold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/IranYekan/ttf/iranyekanwebbold.ttf') format('truetype');
+}
+@font-face {
+	font-family: IRANSans;
+	font-style: light;
+	font-weight: 500;
+	src: url('../fonts/IranYekan/eot/iranyekanweblight.eot');
+	src: url('../fonts/IranYekan/eot/iranyekanweblight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/IranYekan/woff2/iranyekanweblight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/IranYekan/woff/iranyekanweblight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/IranYekan/ttf/iranyekanweblight.ttf') format('truetype');
+}
+@font-face {
+	font-family: IRANSans;
+	font-style: regular;
+	font-weight: 500;
+	src: url('../fonts/IranYekan/eot/iranyekanwebregular.eot');
+	src: url('../fonts/IranYekan/eot/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/IranYekan/woff2/iranyekanwebregular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/IranYekan/woff/iranyekanwebregular.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/IranYekan/ttf/iranyekanwebregular.ttf') format('truetype');
+}
+/*
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 900;
+	src: url('../fonts/IranYekan/eot/robotobold.eot');
+	src: url('../fonts/IranYekan/eot/robotobold.eot?#iefix') format('embedded-opentype'),  
+		 url('../fonts/IranYekan/woff2/robotobold.woff2') format('woff2'),  
+		 url('../fonts/IranYekan/woff/robotobold.woff') format('woff'),  
+		 url('../fonts/IranYekan/ttf/robotobold.ttf') format('truetype');
+}
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 900;
+	src: url('../fonts/IranYekan/eot/robotolight.eot');
+	src: url('../fonts/IranYekan/eot/robotolight.eot?#iefix') format('embedded-opentype'),  
+		 url('../fonts/IranYekan/woff2/robotolight.woff2') format('woff2'),  
+		 url('../fonts/IranYekan/woff/robotolight.woff') format('woff'),  
+		 url('../fonts/IranYekan/ttf/robotolight.ttf') format('truetype');
+}
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 900;
+	src: url('../fonts/IranYekan/eot/robotoregular.eot');
+	src: url('../fonts/IranYekan/eot/robotoregular.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/IranYekan/woff2/robotoregular.woff2') format('woff2'),  
+		 url('../fonts/IranYekan/woff/robotoregular.woff') format('woff'),  
+		 url('../fonts/IranYekan/ttf/robotoregular.ttf') format('truetype');
+}
+*/
